@@ -1,0 +1,16 @@
+{
+  "name": "insightly",
+  "version": "1.0.0",
+  "description": "Survey and Feedback Application",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev"
+  },
+  "keywords": ["survey", "feedback", "mern"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
