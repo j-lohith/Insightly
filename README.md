@@ -293,12 +293,18 @@ This will start both server and client concurrently.
 
 ### Screenshots
 
-![Login Page](./screenshots/login.png)
-![Register Page](./screenshots/register.png)
-![Dashboard](./screenshots/dashboard.png)
-![Create Survey](./screenshots/createSurvey.png)
-![Survey Form](./screenshots/surveyForm.png)
-![Analytics](./screenshots/analytics.png)
+1. Login Page:
+(./screenshots/login.png)
+2. Register Page:
+(./screenshots/register.png)
+3. Dashboard:
+(./screenshots/dashboard.png)
+4. Create Survey:
+(./screenshots/createSurvey.png)
+5. Survey Form:
+(./screenshots/surveyForm.png)
+6. Analytics:
+(./screenshots/analytics.png)
 
 
 
