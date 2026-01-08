@@ -1,3 +1,292 @@
+Insightly - Survey & Feedback App
+
+Insightly is a modern, full-featured Survey and Feedback platform built using the MERN stack. It allows users to create surveys, collect responses, and analyze results in real-time. The app is designed to be fully responsive, intuitive, and visually appealing, with smooth animations and a clean dashboard experience.
+
+Table of Contents
+
+- About the Project
+- Features
+- Screenshots
+- Tech Stack
+- Getting Started
+- Usage
+- API Endpoints
+- Database Structure
+- Real-Time Updates
+- Deployment
+- Troubleshooting
+- Contributing
+- License
+
+About the Project
+
+Insightly is designed to make survey management and feedback collection seamless. Users can:
+
+- Create surveys with multiple question types
+- Publish and share surveys via unique links
+- Track responses in real-time
+- View analytics with charts and text summaries
+
+It’s perfect for collecting feedback in businesses, educational institutions, or any community.
+
+Features
+
+Authentication
+
+- Secure registration & login
+- Password hashing with bcrypt
+- JWT-based authentication
+- Protected routes
+
+Survey Management
+
+- Create, edit, and delete surveys
+- Add multiple-choice or text-based questions
+- Dynamic option management for multiple choice
+- Publish/unpublish surveys
+- Share surveys via unique links
+
+Feedback Collection
+
+- Fill surveys anonymously or with identification
+- One response per user (IP-based)
+- Smooth form validation & submission animations
+
+Analytics & Dashboard
+
+- Total responses per survey
+- Per-question breakdowns
+- Real-time updates via Socket.io
+- Visual charts with Chart.js
+
+User Experience
+
+- Modern, clean design
+- Fully responsive on all devices
+- Smooth animations with Framer Motion
+- Toast notifications and error handling
+
+Screenshots
+
+Here you can showcase your app visually. For each screenshot, use the following Markdown:
+
+![Login](./screenshots/login.png)  
+![Register](./screenshots/register.png)   
+![Dashboard](./screenshots/dashboard.png)  
+![Create Survey](./screenshots/createSurvey.png)  
+![Survey Form](./screenshots/surveyForm.png)  
+![Analytics](./screenshots/analytics.png) 
+
+
+
+
+Tip: Create a screenshots/ folder in your project and add all your images there. Update the file names to match your screenshots.
+
+Tech Stack
+
+Frontend
+
+- React 18, Vite
+
+Tailwind CSS & Framer Motion
+
+React Router DOM
+
+Axios & Socket.io Client
+
+Chart.js
+
+Backend
+
+- Node.js, Express.js
+
+MongoDB & Mongoose
+
+JWT & bcryptjs
+
+Socket.io for real-time updates
+
+Getting Started
+Prerequisites
+
+Node.js v16+
+
+npm (comes with Node.js)
+
+MongoDB (local installation)
+
+MongoDB Compass
+
+Installation
+```bash
+# Clone the repo
+git clone <your-repo-link>
+
+# Install root dependencies
+npm install
+
+# Install server dependencies
+cd server
+npm install
+cd ..
+
+# Install client dependencies
+cd client
+npm install
+cd ..
+```
+
+Configuration
+
+Create a .env file in the server/ directory:
+
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/insightly
+JWT_SECRET=your_secret_key
+NODE_ENV=development
+
+
+Ensure MongoDB is running on mongodb://localhost:27017.
+
+Usage
+Start the App
+```bash
+# Start backend
+cd server
+npm start
+
+# Start frontend (in a new terminal)
+cd client
+npm run dev
+
+
+Optional: Start both concurrently with:
+
+npm run dev
+```
+
+Typical Workflow
+
+Register an account → Login
+
+Create a survey with multiple questions
+
+Publish survey → Copy shareable link
+
+Users fill the survey → Responses collected
+
+View analytics in real-time dashboard
+
+API Endpoints (Brief)
+
+Auth
+
+POST /api/auth/register → Register new user
+
+POST /api/auth/login → Login user
+
+GET /api/auth/me → Get current user (protected)
+
+Surveys
+
+GET /api/surveys → All user surveys
+
+POST /api/surveys → Create survey
+
+PUT /api/surveys/:id → Update survey
+
+PATCH /api/surveys/:id/publish → Publish survey
+
+GET /api/surveys/share/:link → Public survey link
+
+Responses
+
+POST /api/responses → Submit survey response
+
+Database Structure
+
+User
+
+{
+  "_id": "...",
+  "name": "...",
+  "email": "...",
+  "password": "...",
+  "createdAt": "...",
+  "updatedAt": "..."
+}
+
+
+Survey
+
+{
+  "_id": "...",
+  "title": "...",
+  "description": "...",
+  "questions": [...],
+  "isPublished": true/false,
+  "shareLink": "...",
+  "responseCount": 0,
+  "createdBy": "...",
+  "createdAt": "...",
+  "updatedAt": "..."
+}
+
+
+Response
+
+{
+  "_id": "...",
+  "surveyId": "...",
+  "submittedBy": "...",
+  "answers": [...],
+  "ipAddress": "...",
+  "createdAt": "...",
+  "updatedAt": "..."
+}
+
+Real-Time Updates
+
+Responses update analytics instantly
+
+Socket.io handles live updates without refreshing
+
+Users joining the survey room get live response count updates
+
+Deployment
+
+Local deployment: MongoDB at localhost:27017, backend at 5000, frontend at 5173
+
+Production tips:
+
+Use MongoDB Atlas
+
+Update JWT_SECRET
+
+Serve frontend build from server or CDN
+
+Enable HTTPS and proper CORS
+
+Troubleshooting
+
+MongoDB not connecting → Ensure service is running
+
+Ports in use → Change port or stop other processes
+
+JWT token errors → Clear localStorage and relogin
+
+Socket.io not updating → Verify server is running
+
+Contributing
+
+Fork the repo → Create a branch → Make changes → Test → Submit PR
+
+License
+
+This project is submitted for internship purposes. All rights reserved.
+
+Made with ❤️ by J Lohith
+
 # Insightly - Survey & Feedback Application
 
 Insightly is a comprehensive, production-ready survey and feedback collection platform built with the MERN stack. It enables users to create, manage, and analyze surveys with real-time response tracking and detailed analytics.
