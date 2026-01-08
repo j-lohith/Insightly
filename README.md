@@ -294,19 +294,22 @@ This will start both server and client concurrently.
 ### Screenshots
 
 1. Login Page:
-(./screenshots/login.png)
+![Login Page](./screenshots/login.png)
+
 2. Register Page:
-(./screenshots/register.png)
+![Register Page](./screenshots/register.png)
+
 3. Dashboard:
-(./screenshots/dashboard.png)
+![Dashboard](./screenshots/dashboard.png)
+
 4. Create Survey:
-(./screenshots/createSurvey.png)
+![Create Survey](./screenshots/createSurvey.png)
+
 5. Survey Form:
-(./screenshots/surveyForm.png)
+![Survey Form](./screenshots/surveyForm.png)
+
 6. Analytics:
-(./screenshots/analytics.png)
-
-
+![Analytics](./screenshots/analytics.png)
 
 ## API Endpoints
 
