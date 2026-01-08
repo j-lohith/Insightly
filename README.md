@@ -13,6 +13,7 @@ Insightly is a comprehensive, production-ready survey and feedback collection pl
 - [Configuration](#configuration)
 - [Running the Application](#running-the-application)
 - [Usage](#usage)
+- [ScreenShots](#screenshots)
 - [API Endpoints](#api-endpoints)
 - [Database Schema](#database-schema)
 - [Authentication](#authentication)
@@ -290,14 +291,15 @@ This will start both server and client concurrently.
 - **Delete**: Click "Delete" to permanently remove a survey (requires confirmation)
 
 
-###  Screenshots
+### Screenshots
 
-- **Login**: (./screenshots/login.png)  
-- **Register**: (./screenshots/register.png)  
-- **Dashboard**: (./screenshots/dashboard.png)  
-- **Create Survey**: (./screenshots/createSurvey.png)  
-- **Survey Form**: (./screenshots/surveyForm.png)  
-- **Analytics Form**: (./screenshots/analytics.png) 
+![Login Page](./screenshots/login.png)
+![Register Page](./screenshots/register.png)
+![Dashboard](./screenshots/dashboard.png)
+![Create Survey](./screenshots/createSurvey.png)
+![Survey Form](./screenshots/surveyForm.png)
+![Analytics](./screenshots/analytics.png)
+
 
 
 ## API Endpoints
